@@ -89,7 +89,10 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
     
     @IBAction func pasteUrlButtonTapped(sender: UIButton) {
         
+        let generalPasteboard: UIPasteboard = UIPasteboard.generalPasteboard()
         
+        guard let pasteText = generalPasteboard.string else { return }
+        urlTextField.text = pasteText
     }
 
     /*

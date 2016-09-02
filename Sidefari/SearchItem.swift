@@ -15,10 +15,24 @@ class SearchItem: Equatable {
     //==================================================
     
     var url: String
-    var timestamp: NSDate
+    var timestamp: NSTimeInterval
     
     static let urlKey = "url"
     static let timestampKey = "timestamp"
+    
+    var timestampString: String {
+        
+        let formatter = NSDateFormatter()
+        formatter.dateStyle = .MediumStyle
+        formatter.timeStyle = .MediumStyle
+        
+        let date = NSDate(timeIntervalSince1970: timestamp)
+        
+        let timestampString = formatter.stringFromDate(date)
+        
+        return timestampString
+        
+    }
     
     //==================================================
     // MARK: - Initializers
@@ -27,13 +41,13 @@ class SearchItem: Equatable {
     init(url: String) {
         
         self.url = url
-        self.timestamp = NSDate()
+        self.timestamp = NSDate().timeIntervalSince1970
     }
     
     init?(dictionaryCopy: Dictionary<String, AnyObject>) {
         
         guard let url = dictionaryCopy[SearchItem.urlKey] as? String
-            , timestamp = dictionaryCopy[SearchItem.timestampKey] as? NSDate
+            , timestamp = dictionaryCopy[SearchItem.timestampKey] as? NSTimeInterval
             else { return nil }
         
         self.url = url
@@ -44,9 +58,9 @@ class SearchItem: Equatable {
     // MARK: - Methods
     //==================================================
     
-    func dictionaryCopy() -> Dictionary<String, AnyObject> {
-        
-        let dictionary = [
+    func dictionaryCopy() -> [String : AnyObject] {
+    
+        let dictionary: [String : AnyObject] = [
             SearchItem.urlKey: self.url
             , SearchItem.timestampKey: self.timestamp
         ]

@@ -14,6 +14,7 @@
 		1F4D41CC1D79D73F00A06BC1 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4D41CB1D79D73F00A06BC1 /* SearchViewController.swift */; };
 		1F4D41CF1D79D9F900A06BC1 /* SearchItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4D41CE1D79D9F900A06BC1 /* SearchItem.swift */; };
 		1F4D41D11D79DA6100A06BC1 /* SearchModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4D41D01D79DA6100A06BC1 /* SearchModelController.swift */; };
+		1F4D41D91D79E65900A06BC1 /* PastSearchesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4D41D81D79E65900A06BC1 /* PastSearchesTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		1F4D41CB1D79D73F00A06BC1 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		1F4D41CE1D79D9F900A06BC1 /* SearchItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchItem.swift; sourceTree = "<group>"; };
 		1F4D41D01D79DA6100A06BC1 /* SearchModelController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchModelController.swift; sourceTree = "<group>"; };
+		1F4D41D81D79E65900A06BC1 /* PastSearchesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PastSearchesTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,7 @@
 			isa = PBXGroup;
 			children = (
 				1F4D41CB1D79D73F00A06BC1 /* SearchViewController.swift */,
+				1F4D41D81D79E65900A06BC1 /* PastSearchesTableViewCell.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -167,6 +170,7 @@
 			files = (
 				1F4D41CF1D79D9F900A06BC1 /* SearchItem.swift in Sources */,
 				1F4D41D11D79DA6100A06BC1 /* SearchModelController.swift in Sources */,
+				1F4D41D91D79E65900A06BC1 /* PastSearchesTableViewCell.swift in Sources */,
 				1F4D41CC1D79D73F00A06BC1 /* SearchViewController.swift in Sources */,
 				1F4D41BA1D79CF8700A06BC1 /* AppDelegate.swift in Sources */,
 			);

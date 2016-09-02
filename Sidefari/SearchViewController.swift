@@ -26,6 +26,9 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
 
         urlTextField.delegate = self
         urlTextField.becomeFirstResponder()
+        
+        pastSearchesTableView.rowHeight = UITableViewAutomaticDimension
+        pastSearchesTableView.estimatedRowHeight = 50
     }
     
     //==================================================
@@ -39,12 +42,11 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCellWithIdentifier("pastSearchCell", forIndexPath: indexPath)
+        guard let cell = tableView.dequeueReusableCellWithIdentifier("pastSearchCell", forIndexPath: indexPath) as? PastSearchesTableViewCell else { return UITableViewCell() }
         
         let searchItem = SearchModelController.sharedController.searches[indexPath.row]
         
-        cell.textLabel?.text = searchItem.url
-        cell.detailTextLabel?.text = "\(searchItem.timestamp)"
+        cell.updateWithSearchItem(searchItem)
         
         return cell
     }
